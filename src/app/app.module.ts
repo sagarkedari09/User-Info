@@ -12,12 +12,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import { SharingService } from './Services/sharing.service';
+import { SearchFilterPipe } from './custom-pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    NewUserComponent
+    NewUserComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import {MatTableModule} from '@angular/material/table';
     MatIconModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [SharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
