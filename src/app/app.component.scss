@@ -1,12 +1,44 @@
-.top-navbar{
-          display: flex;
-          gap: 1em;
-          color: white;
-          background-color: black;
-          padding: 1em;
+.main-app-container {
+  height: 100%;
+  background-image: url("../assets/bgImg2.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  min-height: 0;
 
-          .searchbar{
-                    
-                    right: 0;
-          }
+  .top-navbar {
+    font-size: large;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    background-color: black;
+    padding: 0.5em;
+
+
+    //     .option {
+    //       padding: 0.5em;
+    //       border: thin solid white;
+    //       border-radius: 4px;
+    //     }
+  }
+
+  .routed-component {
+    justify-self: center;
+    min-height: 100%;
+//     min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-navbar {
+    // background-color: red;
+    // padding:1rem;
+    max-width: 100%;
+
+  }
+  .routed-component{
+          max-width: 100%;
+  }
 }

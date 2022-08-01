@@ -42,13 +42,12 @@ export class UserListComponent implements OnInit {
   // data!:IUser 
   columnsToBeDisplayed:string[]=[ 'name', 'email', 'phone', 'address','edit', 'delete']
   
-  deleteUser(element: IUser){
-    console.log(element.position)
+  deleteUser(objIndex:number){
+    console.log(objIndex)
+    this.sharingService.deleteData(objIndex)
     console.log(this.data)
     this.data=localStorage.getItem('data')
-    this.userData = JSON.parse(this.data).filter((ele: IUser )=> ele.position!==element.position)    
-    localStorage.setItem('data',JSON.stringify(this.userData))
-    this.dataSource=this.userData
+    this.dataSource=JSON.parse(this.data)
   }
 
   editUser(objIndex: number){

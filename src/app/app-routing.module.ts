@@ -4,6 +4,7 @@ import { NewUserComponent } from './custom-components/new-user/new-user.componen
 import { UserListComponent } from './custom-components/user-list/user-list.component';
 
 const routes: Routes = [
+  {path:'', component:NewUserComponent},
   {path:'newUser', component:NewUserComponent},
   {path:'userList', component:UserListComponent}
 ];

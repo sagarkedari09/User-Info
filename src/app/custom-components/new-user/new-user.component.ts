@@ -45,7 +45,7 @@ export class NewUserComponent implements OnInit {
   }
   setFormValue() {
     this.index = Number(localStorage.getItem('position'));
-    this.profileForm.patchValue(this.sharingService.getData());
+    this.profileForm.patchValue(this.sharingService.getData() || '');
   }
   onSave(profileForm: any) {
     this.sharingService.updateData(profileForm.value)

@@ -1,7 +1,13 @@
-<nav class="top-navbar">
-  <a (click)="goToNewUser()">New User</a>
-  <a (click)="goToUserList()">User List</a>
-  
-</nav>
+<div class="main-app-container">
+    <nav class="top-navbar">
+        <mat-icon>account_box</mat-icon>
+      <span (click)="goToNewUser()" class="option">New User</span>
+      <a (click)="goToUserList()">User List</a>
+      
+    </nav>
+    <section class="routed-component">
+        <router-outlet> </router-outlet>
+    </section>
+    
+</div>
 
-<router-outlet> </router-outlet>
